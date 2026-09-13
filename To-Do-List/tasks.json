@@ -1,0 +1,10 @@
+[
+    {
+        "task": "Learn Python",
+        "completed": false
+    },
+    {
+        "task": "Practice Flask",
+        "completed": false
+    }
+]
