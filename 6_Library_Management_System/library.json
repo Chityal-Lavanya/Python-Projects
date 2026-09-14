@@ -1,0 +1,14 @@
+[
+    {
+        "book_id": "1",
+        "title": "The Secret",
+        "author": "Rhonda Byrne",
+        "available": true
+    },
+    {
+        "book_id": "2",
+        "title": "Rich Dad and Poor Dad",
+        "author": "Robert Kiyosaki",
+        "available": false
+    }
+]
