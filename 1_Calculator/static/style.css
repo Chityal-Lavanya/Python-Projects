@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 90vh;
+    background: #f4f6fa;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator {
+    width: 450px;
+    max-width: 100%;
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgbs(0, 0, 0, 0.12);
+}
+
+.cal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 15px 20px;
+}
+
+.cal-header h1 {
+    font-size: 30px;
+    color: #dce3ed;
+    font-weight: 600;
+}
+
+.history-btn {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    background: transparent;
+    color: #dce3ed;
+    font-size: 38px;
+    cursor: pointer;
+}
+
+.display {
+    min-height: 265px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    background-color: #18222e;
+    border-radius: 25px;
+    margin-bottom: 28px;
+    overflow: hidden;
+}
+
+.expression {
+    width: 100%;
+    text-align: right;
+    color: #aeb9c9;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.result {
+    width: 100%;
+    color: #ffffff;
+    text-align: right;
+    font-size: 65px;
+    font-weight: 500;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.btns button {
+    height: 75px;
+    border: none;
+    border-radius: 20px;
+    background-color: #263543;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: transform 0.15s ease,
+        opacity 0, 15s ease;
+}
+
+.btns button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.btns button:active {
+    transform: scale(0.95);
+}
+
+.btns .fun-btn {
+    background: #e5e9ef;
+    color: #263543;
+}
+
+.btns .opr-btn {
+    background: #ff7618;
+    color: #ffffff;
+}
+
+.btns .zero-btn {
+    grid-column: span 2;
+}
+
+@media (max-width: 500px) {
+    .calculator {
+        padding: 20px;
+        border-radius: 25px;
+    }
+
+    .display {
+        min-height: 220px;
+        padding: 25px;
+    }
+
+    .result {
+        font-size: 50px;
+    }
+
+    .btns {
+        gap: 10px;
+    }
+
+    .btns button {
+        height: 65px;
+        border-radius: 16px;
+        font-size: 24px;
+    }
+}

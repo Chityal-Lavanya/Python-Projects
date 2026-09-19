@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main class="calculator">
+
+        <!--  header -->
+        <div class="cal-header">
+            <h1>Calculator</h1>
+
+            <button class="history-btn" aria-label="History">
+                ↶
+            </button>
+        </div>
+
+        <!-- Display -->
+        <div class="display">
+
+            <div class="expression">
+
+                {{ expression }}
+
+            </div>
+
+
+            <div class="result">
+
+                {{ result }}
+
+            </div>
+
+        </div>
+
+        <form method="POST">
+
+            <input type="hidden" name="expression" id="expression" value="{{ expression }}">
+
+            <!-- Calculator Button -->
+            <div class="btns">
+
+                <button class="fun-btn" onclick="clear()">C</button>
+                <button class="fun-btn" onclick="toggleSign()">+/-</button>
+                <button class="fun-btn" onclick="addValue('%')">%</button>
+                <button class="opr-btn" onclick="addValue('÷')">÷</button>
+
+                <button onclick="addValue('7')">7</button>
+                <button onclick="addValue('8')">8</button>
+                <button onclick="addValue('9')">9</button>
+                <button class="opr-btn" onclick="addValue('x')">x</button>
+
+                <button onclick="addValue('4')">4</button>
+                <button onclick="addValue('5')">5</button>
+                <button onclick="addValue('6')">6</button>
+                <button class="opr-btn" onclick="addValue('-')">-</button>
+
+                <button onclick="addValue('1')">1</button>
+                <button onclick="addValue('2')">2</button>
+                <button onclick="addValue('3')">3</button>
+                <button class="opr-btn" onclick="addValue('+')">+</button>
+
+                <button class="zero-btn" onclick="addValue('0')">0</button>
+                <button onclick="addValue('.')">.</button>
+                <button class="opr-btn" type="submit">=</button>
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>
